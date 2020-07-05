@@ -15,18 +15,20 @@ int main()
     int dailyTexts = 0;
     double average = 0.0;
 
-    for (day = 1; day < 8; day += 1)
+    for (day = 1; day < 8; day += 1) // for loop to track days
     {
-        cout << "How many text messages did you send on day"
+        //input part of IPO
+        cout << "How many text messages did you send on day" 
             << day << "?";
-        cin >> dailyTexts;
-        totalTexts += dailyTexts;
+        cin >> dailyTexts; //user input for number of text per day
+        totalTexts += dailyTexts; //variable for adding up total text messages
     } //end for
     
-    average = static_cast<double>(totalTexts) / (day - 1);
+    // Calculate and display Average number of text messages
+    average = static_cast<double>(totalTexts) / (day - 1); // processing part of IPO
     cout << fixed << setprecision(0);
     cout << endl << "You sent approximately "
-        << average << " text messages per day." << endl;
+        << average << " text messages per day." << endl; //output part of IPO
     return 0;
 } //end of main function
 
